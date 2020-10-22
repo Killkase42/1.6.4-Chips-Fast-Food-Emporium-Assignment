@@ -10,8 +10,8 @@ public class Main {
         Scanner scan = new Scanner (System.in);
 
         int totalCalories = 0;
-        String burger;
-        String side;
+        String burger = "";
+        String side = "";
         String drink;
         String dessert;
 
@@ -21,39 +21,45 @@ public class Main {
 
         //Printing the menus and acquiring the user's choice of foods. Also, if statements are used to determine whether the user's input is valid or not.
 
-        System.out.println("Which burger would you like?");
-        System.out.println("");
-        System.out.println("A. Cheeseburger          461 Calories");
-        System.out.println("B. Fish Burger           431 Calories");
-        System.out.println("C. Veggie Burger         420 Calories");
-        System.out.println("D. No Burger               0 Calories");
-        System.out.println("");
-        System.out.println("Enter choice below:");
+        while (!burger.equalsIgnoreCase("a") || !burger.equalsIgnoreCase("b") || !burger.equalsIgnoreCase("c") || !burger.equalsIgnoreCase("d")) {
+            System.out.println("Which burger would you like?");
+            System.out.println("");
+            System.out.println("A. Cheeseburger          461 Calories");
+            System.out.println("B. Fish Burger           431 Calories");
+            System.out.println("C. Veggie Burger         420 Calories");
+            System.out.println("D. No Burger               0 Calories");
+            System.out.println("");
+            System.out.println("Enter choice below:");
 
-        burger = scan.nextLine();
+            burger = scan.nextLine();
 
-        if (burger.equalsIgnoreCase("a"))
-            totalCalories += 461;
-        else if (burger.equalsIgnoreCase("b"))
-            totalCalories += 431;
-        else if (burger.equalsIgnoreCase("c"))
-            totalCalories += 420;
-        else if (burger.equalsIgnoreCase("d"))
-            totalCalories += 0;
-        else
-            System.out.println("Not a valid option. ");
+            if (burger.equalsIgnoreCase("a"))
+                totalCalories += 461;
+            else if (burger.equalsIgnoreCase("b"))
+                totalCalories += 431;
+            else if (burger.equalsIgnoreCase("c"))
+                totalCalories += 420;
+            else if (burger.equalsIgnoreCase("d"))
+                totalCalories += 0;
+            else
+                System.out.println("Not a valid option. ");
+
+        }
+
+        while (!side.equalsIgnoreCase("a") || !side.equalsIgnoreCase("b") || !side.equalsIgnoreCase("c") || !side.equalsIgnoreCase("d")) {
+            System.out.println("Which side order would you like?");
+            System.out.println("");
+            System.out.println("A. Fries                100 Calories");
+            System.out.println("B. Baked Potato          57 Calories");
+            System.out.println("C. Chef Salad            70 Calories");
+            System.out.println("D. No Side Order         0 Calories");
+            System.out.println("");
+            System.out.println("Enter choice below:");
+
+            side = scan.nextLine();
 
 
-        System.out.println("Which side order would you like?");
-        System.out.println("");
-        System.out.println("A. Fries                100 Calories");
-        System.out.println("B. Baked Potato          57 Calories");
-        System.out.println("C. Chef Salad            70 Calories");
-        System.out.println("D. No Side Order         0 Calories");
-        System.out.println("");
-        System.out.println("Enter choice below:");
-
-        side = scan.nextLine();
+        }
 
         System.out.println("Which drink would you like?");
         System.out.println("");

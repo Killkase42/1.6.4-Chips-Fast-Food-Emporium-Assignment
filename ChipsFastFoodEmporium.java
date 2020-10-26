@@ -1,4 +1,11 @@
-package com.company;
+/*
+ *Nick Vourlas
+ *October 26, 2020
+ * ICS4U
+ * Mr. Hofstatter
+ * Chip's Fast Food Emporium
+ * A program used to find out what the user wants to order at Chip's Fast Food Emporium and to calculate the total amount of calories.
+ */
 
 import java.util.Scanner;
 
